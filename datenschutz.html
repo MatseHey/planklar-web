@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung – planklar.</title>
+  <meta name="theme-color" content="#0BBF7D">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  ENTWURF, KEINE RECHTSBERATUNG. Quelle: docs/legal/datenschutzerklaerung-de.md,
+  angepasst an die vollständige Account-Löschung (TripService.removeAccountData)
+  und um den Abschnitt zur Website ergänzt. Vor Veröffentlichung:
+  - alle gelb markierten Platzhalter ersetzen
+  - Google-AVV in der Firebase Console bestätigen, DPF-Status von Google prüfen
+  - Pexels-Betreiber verifizieren
+  - mit einem Generator (eRecht24 o. ä.) oder anwaltlich gegenprüfen
+  - privacy.html (EN) inhaltlich synchron halten
+-->
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo.png" alt="">planklar.</a>
+    <nav><a href="privacy.html">English</a></nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap narrow">
+    <h1>Datenschutzerklärung</h1>
+    <p class="updated">Stand: <mark class="todo">[DATUM]</mark></p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+    <address>
+      <mark class="todo">[VORNAME NACHNAME]</mark><br>
+      <mark class="todo">[STRASSE HAUSNUMMER]</mark><br>
+      <mark class="todo">[PLZ ORT]</mark><br>
+      Deutschland<br>
+      E-Mail: <mark class="todo">[KONTAKT-E-MAIL]</mark>
+    </address>
+
+    <h2>2. Überblick</h2>
+    <p>planklar. ist eine App zur gemeinsamen Reiseplanung. Für Konto, gemeinsame Trips, Budget-Splitter, Packlisten, Kalender und Merkzettel nutzen wir <strong>Google Firebase</strong> (Authentication und Firestore-Datenbank) als technischen Dienstleister, dazu einzelne weitere Anbieter für Titelbilder, Wetter und Ortssuche.</p>
+    <p>Wir verwenden <strong>keine</strong> Analyse- oder Tracking-Software und <strong>keine</strong> Werbenetzwerke. Wir greifen nicht auf Ihr Adressbuch oder Ihren Gerätestandort zu.</p>
+
+    <h2>3. Registrierung und Nutzerkonto</h2>
+    <p>Für die Nutzung von planklar. ist ein Nutzerkonto erforderlich. Bei der Registrierung erheben wir:</p>
+    <ul>
+      <li>E-Mail-Adresse</li>
+      <li>Passwort (von Firebase gehasht gespeichert, für uns nicht im Klartext einsehbar)</li>
+      <li>einen selbst gewählten Anzeigenamen</li>
+    </ul>
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungsvertrags).</p>
+    <!-- PRÜFEN: Falls die Firestore-Regeln users/{uid} vor dem Launch auf Trip-Mitglieder
+         einschränken, diesen Absatz anpassen (docs/legal/offene-punkte.md). -->
+    <p>Ihr Anzeigename ist technisch bedingt für andere angemeldete Nutzerinnen und Nutzer der App abrufbar, nicht nur für die Mitglieder Ihrer Trips. Wählen Sie daher keinen vollständigen Klarnamen, wenn Sie das vermeiden möchten.</p>
+    <p>Ihre E-Mail-Adresse wird ausschließlich bei Firebase Authentication gespeichert (Anmeldung, Passwort zurücksetzen), nicht zusätzlich in unserer Datenbank.</p>
+
+    <h2>4. Gemeinsame Reiseplanung (Trips)</h2>
+    <p>Wenn Sie einen Trip erstellen oder über einen Einladungscode beitreten, verarbeiten wir:</p>
+    <ul>
+      <li>Reisedaten: Titel, Ziel, Reisezeitraum, gewählte Reisestile, ob Kinder mitreisen</li>
+      <li>Namen und Nutzer-IDs aller Mitglieder des Trips</li>
+      <li>von Ihnen angelegte Termine, Merkzettel-Einträge, Packlisten-Einträge und Ausgaben</li>
+    </ul>
+    <p>Diese Daten sind für alle Mitglieder desselben Trips sichtbar – das ist die Kernfunktion der App. Private Packlisten-Einträge sehen nur Sie. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+    <p><strong>Budget-Splitter:</strong> Ausgaben enthalten, wer wie viel für wen bezahlt hat. Diese Angaben sind für alle Mitglieder des Trips sichtbar, weil sie für die gemeinsame Abrechnung nötig sind.</p>
+    <p><strong>Freitextfelder:</strong> Bitte tragen Sie in Notizfelder keine personenbezogenen Daten Dritter außerhalb Ihrer Reisegruppe ein, ohne deren Einverständnis.</p>
+
+    <h2>5. Auftragsverarbeitung durch Google Firebase</h2>
+    <p>Für Nutzerkonten (Firebase Authentication) und die Datenbank (Cloud Firestore) nutzen wir <strong>Firebase</strong> der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mit Google besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO.</p>
+    <p><strong>Drittlandübermittlung:</strong> Die Verarbeitung kann auch auf Servern der Google LLC in den USA stattfinden. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert; ergänzend gelten die Standardvertragsklauseln der EU-Kommission.</p>
+
+    <h2>6. Weitere Anbieter in der App</h2>
+    <h3>Titelbilder (Pexels)</h3>
+    <!-- PRÜFEN: aktuellen Betreiber und Sitz von Pexels verifizieren. -->
+    <p>Für Trip-Titelbilder senden wir den Namen des Reiseziels als Suchbegriff an die Bildersuche von Pexels (<mark class="todo">[BETREIBER UND SITZ]</mark>). Nutzerkennungen werden nicht übermittelt; technisch bedingt erhält Pexels Ihre IP-Adresse. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Darstellung Ihres Trips).</p>
+    <h3>Wetterdaten (Open-Meteo)</h3>
+    <p>Für Wettervorhersage und Klimadaten übermitteln wir die Koordinaten Ihres <strong>Reiseziels</strong> (nicht Ihres eigenen Standorts) und den Reisezeitraum an Open-Meteo. Technisch bedingt erhält Open-Meteo Ihre IP-Adresse. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <h3>Ortssuche (Apple MapKit)</h3>
+    <p>Für die Suche nach Orten nutzen wir Apple MapKit. Dabei wird nur Ihre Texteingabe verwendet, nicht Ihr Gerätestandort. Es gilt zusätzlich die Datenschutzerklärung von Apple.</p>
+    <h3>Kalender-Export (Apple EventKit)</h3>
+    <p>Beim Export in den iPhone-Kalender fragt iOS nach Ihrer Erlaubnis. Der Export erfolgt einseitig und vollständig lokal auf Ihrem Gerät; wir erhalten davon keine Daten. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung über die Systemabfrage).</p>
+
+    <h2>7. Teilen-Erweiterung und lokale Speicherung</h2>
+    <p>Links, die Sie aus anderen Apps an planklar. teilen, werden kurz in einem lokalen Speicherbereich auf Ihrem Gerät (App-Gruppe) zwischengelegt, bis Sie sie in einem Trip speichern. Außerdem speichern wir wenige technische Einstellungen nur lokal (z. B. den zuletzt geöffneten Trip). Diese Daten verlassen Ihr Gerät nicht.</p>
+
+    <h2>8. Speicherdauer</h2>
+    <p>Wir speichern Ihre Daten, solange Ihr Nutzerkonto besteht. Inhalte eines Trips bleiben bestehen, bis der Trip gelöscht wird. Beim Löschen eines Trips werden auch seine Termine, Merkzettel, Ausgaben und Packlisten-Einträge gelöscht.</p>
+
+    <h2>9. Löschung Ihres Kontos</h2>
+    <p>Sie können Ihr Konto jederzeit in der App unter „Profil → Konto bearbeiten → Konto löschen“ löschen. Dabei passiert Folgendes:</p>
+    <ul>
+      <li>Ihr Anmeldekonto und Ihr Profil (Anzeigename) werden gelöscht.</li>
+      <li>Aus Trips, denen Sie beigetreten sind, treten Sie aus; Ihr Name wird aus der Mitgliederliste entfernt.</li>
+      <li>Trips, die Sie allein angelegt haben, werden mit allen Inhalten gelöscht.</li>
+      <li>Trips, die Sie angelegt haben und an denen andere teilnehmen, gehen an ein anderes Mitglied über, damit die Gruppe weiterplanen kann.</li>
+      <li>Ihre privaten Packlisten-Einträge werden gelöscht.</li>
+    </ul>
+    <p>In gemeinsamen Trips bleiben Ausgaben, gemeinsame Packlisten-Einträge, Termine und Merkzettel bestehen, die Sie angelegt haben. Sie sind dort nur noch mit einer pseudonymen Nutzer-ID verknüpft und werden als „Ehemaliges Mitglied“ angezeigt. Das dient dem berechtigten Interesse der übrigen Mitglieder an einer vollständigen gemeinsamen Planung und Abrechnung (Art. 6 Abs. 1 lit. f DSGVO). Wenn Sie auch diese Einträge entfernt haben möchten, löschen Sie sie vor der Kontolöschung in der App oder schreiben Sie uns.</p>
+
+    <h2>10. Diese Website</h2>
+    <p>Diese Website wird bei <mark class="todo">[HOSTER, z. B. GitHub Pages der GitHub, Inc., USA]</mark> gehostet. Beim Aufruf verarbeitet der Hoster technisch notwendige Daten wie Ihre IP-Adresse, Datum und Uhrzeit sowie die aufgerufene Seite in Server-Logs, um die Seite auszuliefern und abzusichern. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <p>Die Website setzt keine Cookies, nutzt keine Analyse-Tools und lädt keine Inhalte von Drittanbietern (auch keine externen Schriftarten).</p>
+    <p><strong>Warteliste:</strong> Wenn Sie uns per E-Mail schreiben, um sich auf die Warteliste zu setzen, nutzen wir Ihre Adresse nur, um Sie über den Start der App zu informieren, und löschen sie danach. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, jederzeit per E-Mail widerrufbar).</p>
+
+    <h2>11. Ihre Rechte</h2>
+    <p>Sie haben nach der DSGVO das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21). Eine erteilte Einwilligung können Sie jederzeit widerrufen.</p>
+    <p>Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), z. B. bei der für <mark class="todo">[BUNDESLAND]</mark> zuständigen Landesbehörde.</p>
+    <p>Zur Ausübung Ihrer Rechte genügt eine E-Mail an <mark class="todo">[KONTAKT-E-MAIL]</mark>.</p>
+
+    <!-- Abschnitt zu Abos (StoreKit) und Partnerlinks (GetYourGuide) erst ergänzen, wenn
+         diese Funktionen gebaut sind — Vorlage in docs/legal/datenschutzerklaerung-de.md, Nr. 12. -->
+
+    <h2>12. Änderungen</h2>
+    <p>Wir passen diese Datenschutzerklärung an, sobald sich die Datenverarbeitung ändert. Die aktuelle Fassung finden Sie immer auf dieser Seite und in der App.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="./">← planklar.</a>
+    <nav>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="privacy.html">Privacy Policy (EN)</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
