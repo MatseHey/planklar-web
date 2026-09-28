@@ -1,6 +1,6 @@
-# planklar. – Website
+# tripklar. – Website
 
-Onepager, Datenschutzerklärung (DE/EN) und Impressum der iOS-App planklar.
+Onepager, Datenschutzerklärung (DE/EN) und Impressum der iOS-App tripklar.
 Statisches HTML ohne Build-Schritt, ausgeliefert über GitHub Pages:
 https://matsehey.github.io/planklar-web/
 
