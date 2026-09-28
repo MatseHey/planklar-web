@@ -2,7 +2,7 @@
 
 Onepager, Datenschutzerklärung (DE/EN) und Impressum der iOS-App tripklar.
 Statisches HTML ohne Build-Schritt, ausgeliefert über GitHub Pages:
-https://matsehey.github.io/planklar-web/
+https://tripklar.app/ (eigene Domain über die Datei `CNAME`)
 
 - `index.html` – Onepager (Kontakt per Mail, keine Warteliste)
 - `datenschutz.html` / `privacy.html` – Datenschutzerklärung DE/EN, inhaltlich synchron halten
@@ -15,5 +15,5 @@ Die Seite lädt nichts von Dritten (keine Schriften, kein Tracking, keine Cookie
 Offene Platzhalter sind auf der Seite gelb markiert (`<mark class="todo">`),
 Prüfhinweise stehen als HTML-Kommentare im Quelltext.
 
-Die App verlinkt Datenschutz und Impressum über `AppContact.websiteURL` –
-ändert sich die Adresse (z. B. eigene Domain), dort und in App Store Connect anpassen.
+Die App verlinkt Datenschutz, Nutzungsbedingungen und Impressum über
+`AppContact.websiteURL` – ändert sich die Adresse, dort und in App Store Connect anpassen.
