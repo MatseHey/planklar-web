@@ -4,8 +4,9 @@ Onepager, Datenschutzerklärung (DE/EN) und Impressum der iOS-App planklar.
 Statisches HTML ohne Build-Schritt, ausgeliefert über GitHub Pages:
 https://matsehey.github.io/planklar-web/
 
-- `index.html` – Onepager mit Warteliste (per Mail)
+- `index.html` – Onepager (Kontakt per Mail, keine Warteliste)
 - `datenschutz.html` / `privacy.html` – Datenschutzerklärung DE/EN, inhaltlich synchron halten
+- `nutzungsbedingungen.html` / `terms.html` – Nutzungsbedingungen DE/EN, ergänzen Apples Standard-EULA
 - `impressum.html` – Impressum nach § 5 DDG
 - `style.css` – Farben aus `AppTheme.swift` der App, Dark Mode per `prefers-color-scheme`
 - `assets/` – Logo, Favicons, Hero-Mockup
