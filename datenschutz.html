@@ -56,9 +56,9 @@
       <li>einen selbst gewählten Anzeigenamen</li>
     </ul>
     <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungsvertrags).</p>
-    <!-- PRÜFEN: Falls die Firestore-Regeln users/{uid} vor dem Launch auf Trip-Mitglieder
-         einschränken, diesen Absatz anpassen (docs/legal/offene-punkte.md). -->
-    <p>Ihr Anzeigename ist technisch bedingt für andere angemeldete Nutzerinnen und Nutzer der App abrufbar, nicht nur für die Mitglieder Ihrer Trips. Wählen Sie daher keinen vollständigen Klarnamen, wenn Sie das vermeiden möchten.</p>
+    <!-- Gilt, sobald die Firestore-Regeln mit "list: if false" für users/{uid} in der
+         Firebase Console veröffentlicht sind. -->
+    <p>Ihr Anzeigename ist für die Mitglieder Ihrer Trips sichtbar. Technisch kann ihn nur abrufen, wer Ihre zufällig vergebene Nutzer-ID kennt – eine Liste aller Nutzerinnen und Nutzer lässt sich nicht abrufen.</p>
     <p>Ihre E-Mail-Adresse wird ausschließlich bei Firebase Authentication gespeichert (Anmeldung, Passwort zurücksetzen), nicht zusätzlich in unserer Datenbank.</p>
     <p><strong>Mit Apple anmelden:</strong> Wenn Sie „Mit Apple anmelden“ nutzen, erhalten wir von Apple eine Nutzerkennung, eine E-Mail-Adresse (auf Wunsch eine anonyme Weiterleitungsadresse von Apple) und bei der ersten Anmeldung Ihren Namen, falls Sie ihn freigeben. Ein Passwort gibt es dann nicht. Beim Löschen Ihres Kontos widerrufen wir den Zugriff von planklar. auf Ihre Apple-ID. Es gilt zusätzlich die Datenschutzerklärung von Apple.</p>
 
