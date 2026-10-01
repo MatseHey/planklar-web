@@ -78,7 +78,6 @@ svg.i {
 .hero h1 span, .accent { color: var(--primary); }
 .hero p.lead { font-size: 19px; color: var(--grey); margin: 0 0 32px; max-width: 32em; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero small { display: block; margin-top: 16px; color: var(--grey); font-size: 14px; }
 
 @media (max-width: 820px) {
   .hero { padding: 48px 0 40px; }
