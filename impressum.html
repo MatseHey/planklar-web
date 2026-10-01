@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impressum – tripklar.</title>
-  <meta name="theme-color" content="#0BBF7D">
+  <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
@@ -16,6 +16,8 @@
   Vor Veröffentlichung Platzhalter ersetzen und klären, ob privat oder gewerblich
   (docs/legal/offene-punkte.md). Bei gewerblichem Betrieb (Abo, Affiliate) ggf. ergänzen:
   USt-IdNr., Angaben zur Verbraucherschlichtung (§ 36 VSBG).
+  Stand 1.10.2026: Pexels wird nur noch als Bildquelle der mitgelieferten Titelbilder genannt,
+  Open-Meteo durch Apple Weather (WeatherKit) ersetzt.
 -->
 
 <header class="site-header">
@@ -46,16 +48,17 @@
     <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
     <h2>Haftung für Links</h2>
-    <p>Die Website und die App enthalten Links zu externen Angeboten Dritter (z. B. Pexels, Open-Meteo, Apple). Auf deren Inhalte haben wir keinen Einfluss; verantwortlich ist der jeweilige Anbieter.</p>
+    <p>Die Website und die App enthalten Links zu externen Angeboten Dritter (z. B. Apple). Auf deren Inhalte haben wir keinen Einfluss; verantwortlich ist der jeweilige Anbieter.</p>
 
     <h2>Bildnachweise</h2>
-    <p>Titelbilder in der App stammen von <a href="https://www.pexels.com">Pexels</a> und werden dort mit dem Namen der Fotografin oder des Fotografen angezeigt. Wetterdaten von <a href="https://open-meteo.com">Open-Meteo</a>.</p>
+    <p>Die mitgelieferten Titelbilder in der App stammen von <a href="https://www.pexels.com">Pexels</a> und werden in der App mit dem Namen der Fotografin oder des Fotografen angezeigt. Wetterdaten stammen von Apple Weather; die <a href="https://weatherkit.apple.com/legal-attribution.html">rechtlichen Hinweise und weiteren Datenquellen</a> sind auch in der App verlinkt.</p>
+    <p><mark class="todo">PRÜFEN: Apple verlangt die Quellenangabe „Apple Weather“ samt Link in der App (Umsetzung: WeatherAttributionView, vor Release gegen die aktuelle WeatherKit-API prüfen). Am Wetter-Chip der Startseite (aktives Trip-Karte) wird sie derzeit nicht angezeigt.</mark></p>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <a href="./">← tripklar.</a>
+    <a class="back" href="./"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>tripklar.</a>
     <nav>
       <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
       <a href="datenschutz.html">Datenschutz</a>

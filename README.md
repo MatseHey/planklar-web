@@ -8,7 +8,7 @@ https://tripklar.app/ (eigene Domain über die Datei `CNAME`)
 - `datenschutz.html` / `privacy.html` – Datenschutzerklärung DE/EN, inhaltlich synchron halten
 - `nutzungsbedingungen.html` / `terms.html` – Nutzungsbedingungen DE/EN, ergänzen Apples Standard-EULA
 - `impressum.html` – Impressum nach § 5 DDG
-- `style.css` – Farben aus `AppTheme.swift` der App, Dark Mode per `prefers-color-scheme`
+- `style.css` – Farben aus `AppTheme.swift` der App, nur Light Mode, minimalistisch (Linien statt Karten, SVG-Icons)
 - `assets/` – Logo, Favicons, Hero-Mockup
 
 Die Seite lädt nichts von Dritten (keine Schriften, kein Tracking, keine Cookies).

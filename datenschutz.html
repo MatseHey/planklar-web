@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutzerklärung – tripklar.</title>
-  <meta name="theme-color" content="#0BBF7D">
+  <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
@@ -14,10 +14,12 @@
 <!--
   ENTWURF, KEINE RECHTSBERATUNG. Quelle: docs/legal/datenschutzerklaerung-de.md,
   angepasst an die vollständige Account-Löschung (TripService.removeAccountData)
-  und um den Abschnitt zur Website ergänzt. Vor Veröffentlichung:
+  und um den Abschnitt zur Website ergänzt. Stand 1.10.2026: Pexels-Live-Suche
+  entfernt (Titelbilder sind jetzt in der App gebündelt), Open-Meteo durch Apple
+  WeatherKit ersetzt. Vor Veröffentlichung:
   - alle gelb markierten Platzhalter ersetzen
   - Google-AVV in der Firebase Console bestätigen, DPF-Status von Google prüfen
-  - Pexels-Betreiber verifizieren
+  - Altlast: Trips mit alter Pexels-URL im Cover-Feld (siehe Abschnitt 6, Titelbilder)
   - mit einem Generator (eRecht24 o. ä.) oder anwaltlich gegenprüfen
   - privacy.html (EN) inhaltlich synchron halten
 -->
@@ -32,7 +34,7 @@
 <main class="legal">
   <div class="wrap narrow">
     <h1>Datenschutzerklärung</h1>
-    <p class="updated">Stand: 28. September 2026</p>
+    <p class="updated">Stand: 1. Oktober 2026</p>
 
     <h2>1. Verantwortlicher</h2>
     <p>Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
@@ -45,7 +47,7 @@
     </address>
 
     <h2>2. Überblick</h2>
-    <p>tripklar. ist eine App zur gemeinsamen Reiseplanung. Für Konto, gemeinsame Trips, Budget-Splitter, Packlisten, Kalender und Merkzettel nutzen wir <strong>Google Firebase</strong> (Authentication und Firestore-Datenbank) als technischen Dienstleister, dazu einzelne weitere Anbieter für Titelbilder, Wetter und Ortssuche.</p>
+    <p>tripklar. ist eine App zur gemeinsamen Reiseplanung. Für Konto, gemeinsame Trips, Budget-Splitter, Packlisten, Kalender und Merkzettel nutzen wir <strong>Google Firebase</strong> (Authentication und Firestore-Datenbank) als technischen Dienstleister, dazu Apple für Wetter und Ortssuche.</p>
     <p>Wir verwenden <strong>keine</strong> Analyse- oder Tracking-Software und <strong>keine</strong> Werbenetzwerke. Wir greifen nicht auf Ihr Adressbuch oder Ihren Gerätestandort zu.</p>
 
     <h2>3. Registrierung und Nutzerkonto</h2>
@@ -78,11 +80,21 @@
     <p><strong>Drittlandübermittlung:</strong> Die Verarbeitung kann auch auf Servern der Google LLC in den USA stattfinden. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert; ergänzend gelten die Standardvertragsklauseln der EU-Kommission.</p>
 
     <h2>6. Weitere Anbieter in der App</h2>
-    <h3>Titelbilder (Pexels)</h3>
-    <!-- PRÜFEN: aktuellen Betreiber und Sitz von Pexels verifizieren. -->
-    <p>Für Trip-Titelbilder senden wir den Namen des Reiseziels als Suchbegriff an die Bildersuche von Pexels (Canva Germany GmbH, Pappelallee 78/79, 10437 Berlin). Nutzerkennungen werden nicht übermittelt; technisch bedingt erhält Pexels Ihre IP-Adresse. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Darstellung Ihres Trips).</p>
-    <h3>Wetterdaten (Open-Meteo)</h3>
-    <p>Für Wettervorhersage und Klimadaten übermitteln wir die Koordinaten Ihres <strong>Reiseziels</strong> (nicht Ihres eigenen Standorts) und den Reisezeitraum an Open-Meteo. Technisch bedingt erhält Open-Meteo Ihre IP-Adresse. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <h3>Titelbilder</h3>
+    <!-- Die 20 Auswahl-Bilder liegen im App-Bundle (TripCoverOption.all), stammen ursprünglich von
+         Pexels, werden aber lokal geladen: kein Aufruf bei Pexels, keine Datenübermittlung.
+         TripCoverImage lädt für ALTE Trips mit "http…"-Cover-URL weiterhin direkt von Pexels. -->
+    <p>Die Titelbilder für Ihre Trips stammen aus einer festen Auswahl, die in der App mitgeliefert wird. Beim Anzeigen oder Auswählen eines Titelbilds werden keine Daten an Dritte übertragen.</p>
+    <p><mark class="todo">PRÜFEN: Trips, die vor der Umstellung angelegt wurden, können noch eine Bild-Adresse von Pexels als Titelbild gespeichert haben. Diese Bilder werden direkt von den Servern von Pexels geladen; dabei erhält Pexels technisch bedingt die IP-Adresse des Geräts (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO). Diesen Absatz behalten, solange solche Trips existieren können, und streichen, sobald keine mehr vorhanden sind bzw. die Altlogik entfernt ist.</mark></p>
+    <h3>Wetterdaten (Apple WeatherKit)</h3>
+    <!-- Verifiziert im Code (WeatherService.swift): Es werden nur die Koordinaten des Reiseziels
+         übergeben (CLLocation aus trip.latitude/longitude), keine Nutzer-ID, kein Reisezeitraum;
+         die Tagesvorhersage wird komplett geladen und lokal auf den Reisezeitraum gefiltert.
+         Zusätzlich reverse-geocodet CLGeocoder die Ziel-Koordinaten (Apple), um die Zeitzone
+         des Ziels zu bestimmen. -->
+    <p>Für Wettervorhersage und aktuelles Wetter nutzen wir den Wetterdienst <strong>Apple WeatherKit</strong> der Apple Distribution International Limited, Hollyhill Industrial Estate, Hollyhill, Cork, Irland. Dabei übermitteln wir die Koordinaten Ihres <strong>Reiseziels</strong> (nicht Ihres eigenen Standorts). Eine Nutzerkennung oder Ihr Reisezeitraum werden nicht übermittelt; die App wird gegenüber Apple über ihre eigene Berechtigung (Entitlement) ausgewiesen. Technisch bedingt erhält Apple dabei die IP-Adresse Ihres Geräts. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Wetteranzeige zu Ihrem Reiseziel). Zur Bestimmung der Zeitzone des Reiseziels wandelt Ihr Gerät diese Koordinaten außerdem über die Ortsdienste von Apple in einen Ort um.</p>
+    <p>Wo Wetterdaten angezeigt werden, zeigt die App die von Apple vorgeschriebene Quellenangabe („Apple Weather“) mit einem Link auf die <a href="https://weatherkit.apple.com/legal-attribution.html">rechtlichen Hinweise und weiteren Datenquellen</a>. Es gilt zusätzlich die Datenschutzerklärung von Apple.</p>
+    <p><mark class="todo">PRÜFEN: Ob Apple bei WeatherKit-Abfragen selbst Daten speichert oder in Drittländer (USA) übermittelt, ist hier nicht verifiziert. Aktuelle Angaben von Apple zu WeatherKit einholen und ggf. Drittlandhinweis (DPF/SCC) ergänzen.</mark></p>
     <h3>Ortssuche (Apple MapKit)</h3>
     <p>Für die Suche nach Orten nutzen wir Apple MapKit. Dabei wird nur Ihre Texteingabe verwendet, nicht Ihr Gerätestandort. Es gilt zusätzlich die Datenschutzerklärung von Apple.</p>
     <h3>Kalender-Export (Apple EventKit)</h3>
@@ -129,7 +141,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <a href="./">← tripklar.</a>
+    <a class="back" href="./"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>tripklar.</a>
     <nav>
       <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
       <a href="datenschutz.html">Datenschutz</a>

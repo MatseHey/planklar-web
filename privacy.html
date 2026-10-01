@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy – tripklar.</title>
-  <meta name="theme-color" content="#0BBF7D">
+  <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
@@ -26,7 +26,7 @@
 <main class="legal">
   <div class="wrap narrow">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 28, 2026</p>
+    <p class="updated">Last updated: October 1, 2026</p>
 
     <h2>1. Controller</h2>
     <p>The controller responsible for processing personal data under the General Data Protection Regulation (GDPR) is:</p>
@@ -39,7 +39,7 @@
     </address>
 
     <h2>2. Overview</h2>
-    <p>tripklar. is an app for planning trips together. For accounts, shared trips, the expense splitter, packing lists, calendar and bookmarks we use <strong>Google Firebase</strong> (Authentication and the Firestore database) as a technical service provider, plus a few other services for cover photos, weather and place search.</p>
+    <p>tripklar. is an app for planning trips together. For accounts, shared trips, the expense splitter, packing lists, calendar and bookmarks we use <strong>Google Firebase</strong> (Authentication and the Firestore database) as a technical service provider, plus Apple for weather and place search.</p>
     <p>We do <strong>not</strong> use analytics or tracking software and <strong>no</strong> advertising networks. We do not access your contacts or your device's location.</p>
 
     <h2>3. Registration and account</h2>
@@ -70,10 +70,13 @@
     <p><strong>International transfers:</strong> processing may also take place on servers of Google LLC in the United States. Google is certified under the EU-U.S. Data Privacy Framework; the European Commission's Standard Contractual Clauses apply in addition.</p>
 
     <h2>6. Other services in the app</h2>
-    <h3>Cover photos (Pexels)</h3>
-    <p>For trip cover photos we send the destination name as a search term to the Pexels photo search (Canva Germany GmbH, Pappelallee 78/79, 10437 Berlin, Germany). No user identifiers are sent; Pexels technically receives your IP address. <strong>Legal basis:</strong> Art. 6(1)(f) GDPR.</p>
-    <h3>Weather (Open-Meteo)</h3>
-    <p>For forecasts and climate data we send the coordinates of your <strong>destination</strong> (not your own location) and the travel dates to Open-Meteo, which technically receives your IP address. <strong>Legal basis:</strong> Art. 6(1)(f) GDPR.</p>
+    <h3>Cover photos</h3>
+    <p>The cover photos for your trips come from a fixed selection that ships with the app. No data is sent to third parties when a cover photo is displayed or chosen.</p>
+    <p><mark class="todo">REVIEW: Trips created before this change may still have a Pexels image address stored as their cover. Those images are loaded directly from Pexels' servers, so Pexels technically receives the device's IP address (legal basis Art. 6(1)(f) GDPR). Keep this paragraph as long as such trips may exist and delete it once none remain or the legacy logic is removed.</mark></p>
+    <h3>Weather (Apple WeatherKit)</h3>
+    <p>For forecasts and current weather we use the weather service <strong>Apple WeatherKit</strong> provided by Apple Distribution International Limited, Hollyhill Industrial Estate, Hollyhill, Cork, Ireland. We send the coordinates of your <strong>destination</strong> (not your own location). No user identifier and no travel dates are sent; the app identifies itself to Apple through its own entitlement. Apple technically receives your device's IP address. <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in showing the weather for your destination). To determine the destination's time zone, your device also converts these coordinates into a place name through Apple's location services.</p>
+    <p>Wherever weather data is shown, the app displays the source attribution required by Apple (“Apple Weather”) with a link to the <a href="https://weatherkit.apple.com/legal-attribution.html">legal notices and other data sources</a>. Apple's privacy policy applies as well.</p>
+    <p><mark class="todo">REVIEW: Whether Apple itself stores data from WeatherKit requests or transfers it to third countries (US) has not been verified here. Obtain Apple's current statements on WeatherKit and add a third-country notice (DPF/SCC) if needed.</mark></p>
     <h3>Place search (Apple MapKit)</h3>
     <p>Place search uses Apple MapKit with only the text you type, never your device location. Apple's privacy policy applies as well.</p>
     <h3>Calendar export (Apple EventKit)</h3>
@@ -116,7 +119,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <a href="./">← tripklar.</a>
+    <a class="back" href="./"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>tripklar.</a>
     <nav>
       <a href="terms.html">Terms of Use</a>
       <a href="privacy.html">Privacy Policy</a>
