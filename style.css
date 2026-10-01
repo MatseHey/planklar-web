@@ -200,4 +200,3 @@ section.hero { border-top: 0; }
 .legal address { font-style: normal; }
 
 /* Unfilled placeholders: impossible to overlook before publishing. */
-mark.todo { background: #FFE58A; color: #111; padding: 0 4px; border-radius: 4px; }

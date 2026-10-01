@@ -12,8 +12,8 @@ https://tripklar.app/ (eigene Domain über die Datei `CNAME`)
 - `assets/` – Logo, Favicons, Hero-Mockup
 
 Die Seite lädt nichts von Dritten (keine Schriften, kein Tracking, keine Cookies).
-Offene Platzhalter sind auf der Seite gelb markiert (`<mark class="todo">`),
-Prüfhinweise stehen als HTML-Kommentare im Quelltext.
+Offene Prüfpunkte stehen in `OFFENE-PUNKTE.md`, weitere Prüfhinweise als
+HTML-Kommentare im Quelltext.
 
 Die App verlinkt Datenschutz, Nutzungsbedingungen und Impressum über
 `AppContact.websiteURL` – ändert sich die Adresse, dort und in App Store Connect anpassen.

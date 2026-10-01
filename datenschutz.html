@@ -85,7 +85,6 @@
          Pexels, werden aber lokal geladen: kein Aufruf bei Pexels, keine Datenübermittlung.
          TripCoverImage lädt für ALTE Trips mit "http…"-Cover-URL weiterhin direkt von Pexels. -->
     <p>Die Titelbilder für Ihre Trips stammen aus einer festen Auswahl, die in der App mitgeliefert wird. Beim Anzeigen oder Auswählen eines Titelbilds werden keine Daten an Dritte übertragen.</p>
-    <p><mark class="todo">PRÜFEN: Trips, die vor der Umstellung angelegt wurden, können noch eine Bild-Adresse von Pexels als Titelbild gespeichert haben. Diese Bilder werden direkt von den Servern von Pexels geladen; dabei erhält Pexels technisch bedingt die IP-Adresse des Geräts (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO). Diesen Absatz behalten, solange solche Trips existieren können, und streichen, sobald keine mehr vorhanden sind bzw. die Altlogik entfernt ist.</mark></p>
     <h3>Wetterdaten (Apple WeatherKit)</h3>
     <!-- Verifiziert im Code (WeatherService.swift): Es werden nur die Koordinaten des Reiseziels
          übergeben (CLLocation aus trip.latitude/longitude), keine Nutzer-ID, kein Reisezeitraum;
@@ -94,7 +93,6 @@
          des Ziels zu bestimmen. -->
     <p>Für Wettervorhersage und aktuelles Wetter nutzen wir den Wetterdienst <strong>Apple WeatherKit</strong> der Apple Distribution International Limited, Hollyhill Industrial Estate, Hollyhill, Cork, Irland. Dabei übermitteln wir die Koordinaten Ihres <strong>Reiseziels</strong> (nicht Ihres eigenen Standorts). Eine Nutzerkennung oder Ihr Reisezeitraum werden nicht übermittelt; die App wird gegenüber Apple über ihre eigene Berechtigung (Entitlement) ausgewiesen. Technisch bedingt erhält Apple dabei die IP-Adresse Ihres Geräts. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Wetteranzeige zu Ihrem Reiseziel). Zur Bestimmung der Zeitzone des Reiseziels wandelt Ihr Gerät diese Koordinaten außerdem über die Ortsdienste von Apple in einen Ort um.</p>
     <p>Wo Wetterdaten angezeigt werden, zeigt die App die von Apple vorgeschriebene Quellenangabe („Apple Weather“) mit einem Link auf die <a href="https://weatherkit.apple.com/legal-attribution.html">rechtlichen Hinweise und weiteren Datenquellen</a>. Es gilt zusätzlich die Datenschutzerklärung von Apple.</p>
-    <p><mark class="todo">PRÜFEN: Ob Apple bei WeatherKit-Abfragen selbst Daten speichert oder in Drittländer (USA) übermittelt, ist hier nicht verifiziert. Aktuelle Angaben von Apple zu WeatherKit einholen und ggf. Drittlandhinweis (DPF/SCC) ergänzen.</mark></p>
     <h3>Ortssuche (Apple MapKit)</h3>
     <p>Für die Suche nach Orten nutzen wir Apple MapKit. Dabei wird nur Ihre Texteingabe verwendet, nicht Ihr Gerätestandort. Es gilt zusätzlich die Datenschutzerklärung von Apple.</p>
     <h3>Kalender-Export (Apple EventKit)</h3>
